@@ -1,0 +1,141 @@
+@import "src/import";
+
+.Profile {
+  &Loading {
+    color:#999;display:flex;align-items: center;justify-content: center;
+    flex-direction: column;
+    .spinner {margin-bottom:12px;}
+    .text {margin-left:12px;}
+  }
+  &AuthRequired, &Content {
+    display:flex;align-items: center;justify-content: center;flex-direction: column;
+    &Wrap {
+      width:100%;display:flex;align-items: center;justify-content: center;
+    }
+  }
+  &Content {
+    background:#303030;padding:12px;width:100%;max-width:600px;
+    @include castratedCorners(8px);
+    .loginStatus {
+      @include castratedCorners(6px);
+      width:100%;text-align:center;box-sizing: border-box;
+      font-size:18px;margin-bottom:24px;padding:12px 24px;
+      display:flex;align-items: center;justify-content: center;
+      .loggedInAs {font-size:14px;}
+      .tgAccount {
+        display:flex;align-items: center;justify-content: flex-end;
+        font-size:14px;flex-direction: row-reverse;
+        .tg_info {
+          display:flex;align-items: flex-start;justify-content: center;
+          flex-direction: column;
+          .name {}
+        }
+        .ava {
+          margin-right:8px;
+          @include castratedCorners(4px);border:5px inset rgba(0,0,0,.3);box-sizing: border-box;
+          width:36px;height:36px;
+          &Image {
+            width:100%;height:100%;background-size:cover;background-position:center;
+          }
+        }
+        .logOut {
+          &Btn {
+            color:var(--red);cursor:pointer;font-size:12px;line-height:1;
+            opacity:.7;transition:.3s;
+            &:hover {opacity:1;}
+          }
+        }
+      }
+    }
+    .topUp {
+      display:block;background:#191919;width:100%;margin:0 -24px;padding:12px 24px;
+      &Loading {
+        color:#999;width:100%;display:flex;justify-content: center;align-items: center;
+      }
+      &Mobile {
+        display:flex;align-items: center;justify-content: center;
+        flex-direction: column;padding:12px 0;
+        .topUpTitle {
+          font-size:14px;margin-bottom:12px;
+        }
+      }
+      &Desktop {
+        display:flex;align-items: center;justify-content: flex-start;
+        .qrCodeWrap {
+          .topUpQR {
+            width:180px;height:180px;overflow:hidden;
+            canvas {width:100% !important;height:100% !important;}
+          }
+        }
+        .topUpInfo {
+          margin-left:24px;
+          width: 400px;
+          .textScan {
+            font-size:20px;
+            span {color:#45AEF5}
+          }
+          .or {
+            font-size:12px;color:#999;margin:12px 0;
+          }
+          .link {
+            background:#222;padding:12px;user-select: all;
+            font-size:14px;
+            word-wrap: break-word;
+          }
+        }
+      }
+    }
+    .balance {
+      width:100%;
+      .wallet {
+        background:#202020;padding:12px;margin-bottom:36px;
+        width:100%;box-sizing: border-box;
+        @include castratedCorners(6px);
+        &Info {
+          margin-bottom:8px;font-size:13px;text-align:center;color:#CCC;
+        }
+        .addr, .balance {
+          display:flex;align-items: center;justify-content: space-between;
+          font-size:14px;padding:4px 0;
+          .title {
+            color:#999;
+          }
+          .address {font-size:15px;}
+          .content {
+            display: flex;align-items: flex-end;justify-content: center;
+            flex-direction: column;
+            & > div:first-child {
+              font-size:15px;
+            }
+            & > div:last-child {
+              font-size:12px;color:#999;
+            }
+          }
+          @include _720 {
+            flex-direction: column;align-items: flex-start;
+            .content {
+              align-items: flex-start;
+            }
+          }
+        }
+        .actions {
+          display:flex;align-items: center;justify-content: space-between;padding-top:12px;
+          .actionBtn {
+            color:#45AEF5;font-size:14px;cursor:pointer;transition: .5s;
+          }
+          &Disabled {
+            .actionBtn {
+              opacity:.3;
+            }
+          }
+        }
+      }
+    }
+    .info {
+      color:#999;
+      & > div {
+        margin-top:12px;font-size:11px;
+      }
+    }
+  }
+}

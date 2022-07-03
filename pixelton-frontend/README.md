@@ -1,0 +1,3 @@
+  Pixelton is a web-game, where users can draw on a 1000x1000 pixels canvas. Each pixel costs 0.001 TON Coin. Users can support their favourite Telegram channels and leave a mark in history of Internet and TON Project.
+  
+  Payments are implemented through TON Payment Channels. For every user we create temporary TON wallet, which is stored directly in browser and we do not have access to it. User can send coins to this wallet and spend it by drawing pixels. Coins are deducted from the wallet only when user puts a pixel on the canvas. At any moment user can withdraw money from temporary wallet to his main wallet.

@@ -1,0 +1,9 @@
+{
+    "apps": [
+        {
+            "name": "pixelton",
+            "script": "ts-node",
+            "args" : "src/index.ts"
+        }
+    ]
+}

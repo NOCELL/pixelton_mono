@@ -1,0 +1,15 @@
+@import "src/import";
+
+.Page {
+  &Wrap {
+    margin-top:80px;
+    padding:24px 32px;
+    @include _800 {margin-top:150px;}
+    @include _560 {margin-top:180px;}
+  }
+  &Content {
+    color:#FFF;
+    p:first-of-type {margin-top:0;}
+    p:last-of-type {margin-bottom:0;}
+  }
+}

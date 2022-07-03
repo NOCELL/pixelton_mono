@@ -1,0 +1,37 @@
+@import "src/import";
+
+.About {
+  position:relative;
+  &List {
+    max-width:800px;width:100%;
+    display:flex;align-items: flex-start;justify-content: center;
+    &Item {
+      position:relative;width:33%;padding:50px 8px 8px 40px;box-sizing: border-box;
+      .n {position:absolute;top:0;z-index:2;left:0;opacity:.5;}
+      .text {font-size:14px;line-height:1.2;position:relative;z-index:2;}
+    }
+    @include _720 {
+      flex-direction: column;
+      &Item {
+        width:100%;margin-top:24px;padding:30px 0 8px 0;
+        max-width:400px;
+        &:first-child {margin-top:0;}
+        .n {
+          left:50%;transform: translateX(-50%);
+          svg {height:40px}
+        }
+        .text {text-align:center;font-size:13px;}
+      }
+    }
+  }
+  &Developers {
+    position:absolute;bottom:0;right:0;
+    font-size:10px;color:#999;
+    @include _800 {
+      position:relative;text-align: center;margin-top:24px;
+    }
+  }
+  &Button {
+    display:flex;align-items: center;justify-content: center;margin-top:24px;
+  }
+}

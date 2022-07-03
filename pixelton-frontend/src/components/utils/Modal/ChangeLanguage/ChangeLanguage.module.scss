@@ -1,0 +1,24 @@
+@import "src/import";
+
+.ChangeLang {
+  margin:-12px;
+  &Item {
+    cursor:pointer;border-radius:6px;position:relative;
+    display:flex;align-items: center;justify-content: flex-start;
+    @include castratedCorners(4px);
+    &:hover {
+      background:#00000099;
+    }
+    padding:12px;width:160px;box-sizing: border-box;
+    .icon, .lang {
+      user-select:none;
+    }
+    .lang {line-height:1;position:relative;top:-2px;}
+    .icon {
+      margin-right:12px;height:24px;
+    }
+    .check {
+      position:absolute;right:8px;top:13px;color:#0F0;
+    }
+  }
+}
